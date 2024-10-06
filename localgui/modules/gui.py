@@ -46,19 +46,19 @@ def main():
     file_path.grid(row=1, column=1, columnspan=2, padx=10,  sticky="nsew")
     file_desc.grid(row=2, column=1, columnspan=2, padx=10, pady=10,  sticky="nsew")
     
-    add_path_button = ttk.Button(frame1, style="button1.TButton", text="LISÄÄ KANSIO", command=lambda: browse_and_add_path(file_listbox))
+    add_path_button = ttk.Button(frame1, style="button1.TButton", text="ADD FILEPATH", command=lambda: browse_and_add_path(file_listbox))
     add_path_button.grid(row=2, column=0, padx=10, pady=10, sticky="nsew")
 
-    launch_server_button = tk.Button(frame3, highlightbackground='white', text="Käynnistä palvelin", command=lambda: run_npm_dev(file_path, delete_path_button))
+    launch_server_button = tk.Button(frame3, highlightbackground='white', text="Run localhost", command=lambda: run_npm_dev(file_path, delete_path_button))
     launch_server_button.grid(row=2, column=1, padx=10, pady=10, sticky="w")
 
-    delete_path_button = tk.Button(frame3, highlightbackground='white', text="Poista kansio", command=lambda:remove_selected_path(file_listbox, file_name, file_path))
+    delete_path_button = tk.Button(frame3, highlightbackground='white', text="Remove filepath", command=lambda:remove_selected_path(file_listbox, file_name, file_path))
     delete_path_button.grid(row=2, column=3, padx=10, pady=10, sticky="w")
 
-    stop_button = tk.Button(frame3, highlightbackground='white', text="Sammuta Palvelin", command=lambda:stop_npm_dev(delete_path_button))
+    stop_button = tk.Button(frame3, highlightbackground='white', text="Shut down", command=lambda:stop_npm_dev(delete_path_button))
     stop_button.grid(row=2, column=2, pady=10, sticky="w")
 
-    open_editor = tk.Button(frame4, highlightbackground='white', text="Avaa koodieditori", command=lambda:open_code_editor(file_path), anchor="center")
+    open_editor = tk.Button(frame4, highlightbackground='white', text="Open VSCode", command=lambda:open_code_editor(file_path), anchor="center")
     open_editor.grid(row=3, column=3, pady=10, padx=10)
 
 
