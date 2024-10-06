@@ -1,0 +1,4 @@
+colour==0.1.5
+psutil==6.0.0
+tk==0.1.0
+tkmacosx==1.0.5
