@@ -1,3 +1,7 @@
+<b><i>LocalGUI</i></b> is a personal project for practicing purposes. It maintains all my NodeJS projects, enables starting development servers and opening project foldes in VS Code.
+
+<br>
+
 <b>Prequisities for local system</b>
 - Node.js
 - Python
