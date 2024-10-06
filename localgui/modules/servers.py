@@ -37,9 +37,9 @@ def run_npm_dev(file_path_raw, delete_button):
                 thread.start()
 
             else:
-                print(f"Kansiota ei löydy: {file_path}")
+                print(f"Folder can't be found: {file_path}")
     except Exception as e:
-            print(f"Virhe npm run dev suoritettaessa: {e}")
+            print(f"Error in npm run dev: {e}")
 
 
 def kill_process_tree(pid):
@@ -54,25 +54,25 @@ def kill_process_tree(pid):
         for p in alive:
             p.kill()
         parent.kill()
-        print("Palvelin sammutettu ja kaikki lapsiprosessit tapettu.")
+        print("Server and child processes killed.")
     except psutil.NoSuchProcess:
-        print("Prosessia ei löytynyt.")
+        print("Process can't be found.")
     except Exception as e:
-        print(f"Virhe prosessien tappamisessa: {e}")
+        print(f"Error in killing process: {e}")
 
 
 def stop_npm_dev(delete_button):
     global server_process
     if server_process:
         try:
-            print("Yritetään sammuttaa palvelin...")
+            print("Trying to shut down...")
             kill_process_tree(server_process.pid)
             server_process = None
             delete_button.config(state=tk.NORMAL)
         except Exception as e:
-            print(f"Virhe palvelimen sammuttamisessa: {e}")
+            print(f"Error in shut down: {e}")
     else:
-        print("Palvelinta ei ole käynnissä.")
+        print("Server not active.")
 
 
 def open_code_editor(file_path):
@@ -105,6 +105,6 @@ def open_code_editor(file_path):
                 thread.start()
 
             else:
-                print(f"Kansiota ei löydy: {file_path}")
+                print(f"Folder can't be found: {file_path}")
     except Exception as e:
-            print(f"Virhe code . suoritettaessa: {e}")
+            print(f"Error in code .: {e}")

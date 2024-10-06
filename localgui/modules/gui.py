@@ -13,8 +13,8 @@ def main():
     ttk.Style().configure('button1.TButton', highlightbackground="white", foreground='black', background='#ffba0a')
 
     #Master window basic grid
-    root.grid_columnconfigure(0, weight=1)  # Vasen osa (1/3)
-    root.grid_columnconfigure(1, weight=1)  # Oikea osa (2/3)
+    root.grid_columnconfigure(0, weight=1) 
+    root.grid_columnconfigure(1, weight=1) 
     root.grid_columnconfigure(2, weight=1)
     root.grid_columnconfigure(3, weight=1)
     root.grid_rowconfigure(0, weight=2)
